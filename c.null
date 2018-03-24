@@ -1,0 +1,40 @@
+#!/usr/bin/bash
+
+c='\e[0;34m' 
+o='\033[92m'
+l='\e[1;32m'
+
+clear
+
+echo -e $l"-----00oooo------oooooo000000000"
+echo -e $l" _     _    _    _   _____  _____"
+echo -e $l"|  \  | |  | \  / | |  0  | |    |"
+echo -e $l"|   \ | |  |  \/  | |  _  | | ___|"
+echo -e $l"| |\ \| |  | |\/| | | | | | | |   "
+echo -e $l"|_| \___|  |_|  |_| |_| |_| |_|   "
+echo -e $l"-----00000000000000---000000000---"
+
+echo -e $c 1.cari bug
+echo -e $c 2.nmap scan
+echo -e $c 3.hydra
+read -p "f4n>" act;
+
+if [ $act = 1 ]
+then
+echo -e $l "masukan web:"
+read d
+curl -I $d
+fi
+
+if [ $act = 2 ]
+then
+echo -e $o"Masukan web:"
+read a
+nmap -p 80 --script dns-brute.nse $a
+fi
+
+if [ $act = 3 ]
+then
+cd
+./m
+fi
