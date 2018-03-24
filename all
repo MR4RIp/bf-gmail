@@ -35,6 +35,6 @@ fi
 
 if [ $act = 3 ]
 then
-cd
-./m
+cd Mr4rip
+./gbf
 fi
